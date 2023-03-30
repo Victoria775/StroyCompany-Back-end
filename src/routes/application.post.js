@@ -8,8 +8,6 @@ router.post('/application', authMiddlewares, async (req, res) => {
     const { userId, fio, category, date, type, comment, status, process } =
       req.body
 
-    console.log('---------------------------------- ', req.body);
-
     await Application.create({
       userId,
       first_name: fio.first_name,
@@ -26,7 +24,6 @@ router.post('/application', authMiddlewares, async (req, res) => {
 
     res.status(201).json('Заявление успешно создано')
   } catch (error) {
-    console.log('rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ===== =rr== ====== ', error)
     res.status(400).json({
       success: false,
       message: 'Ошибка создания заявления :(',

@@ -49,7 +49,6 @@ module.exports = (sequelize, DataTypes) => {
       text: DataTypes.TEXT,
 
       infoFile: DataTypes.TEXT,
-      
     },
     {
       sequelize,

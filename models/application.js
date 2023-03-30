@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       userId: {
         type: DataTypes.UUID,
         allowNull: false,
-        // field: 'userId',
       },
 
       first_name: {

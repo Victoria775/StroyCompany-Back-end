@@ -1,8 +1,5 @@
 const express = require('express')
 const router = express.Router()
-// const authMiddlewares = require('../middlewares/auth.middlewares.js')
-// const multer = require('multer')
-// const upload = multer({ dest: 'uploads/' })
 
 router.post('/file', async (req, res) => {
   try {
