@@ -48,6 +48,10 @@ module.exports = {
         type: Sequelize.TEXT,
       },
 
+      isRead: {
+        type: Sequelize.BOOLEAN,
+      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

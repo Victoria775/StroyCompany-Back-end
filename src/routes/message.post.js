@@ -5,7 +5,7 @@ const authMiddlewares = require('../middlewares/auth.middlewares.js')
 
 router.post('/message', authMiddlewares, async (req, res) => {
   try {
-    const { userId, senderId, senderFio, text, infoFile } = req.body
+    const { userId, senderId, senderFio, text, infoFile, isRead } = req.body
 
     await Message.create({
       userId,
@@ -15,6 +15,7 @@ router.post('/message', authMiddlewares, async (req, res) => {
       sender_full_name: senderFio.full_name,
       text,
       infoFile,
+      isRead,
     })
 
     res.status(201).json('Сообщение успешно отправлено')

@@ -49,6 +49,8 @@ module.exports = (sequelize, DataTypes) => {
       text: DataTypes.TEXT,
 
       infoFile: DataTypes.TEXT,
+
+      isRead: DataTypes.BOOLEAN,
     },
     {
       sequelize,
