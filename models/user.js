@@ -53,6 +53,10 @@ module.exports = (sequelize, DataTypes) => {
       },
 
       role: DataTypes.STRING,
+      user_position: DataTypes.STRING,
+      phone: DataTypes.STRING,
+      mail: DataTypes.STRING,
+      name_files: DataTypes.TEXT,
 
       time_month_work: DataTypes.INTEGER,
       time_month_medical: DataTypes.INTEGER,

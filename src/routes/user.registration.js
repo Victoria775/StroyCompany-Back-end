@@ -6,7 +6,7 @@ const tokenHelper = require('../service/token-helper')
 
 router.post('/registration', async (req, res) => {
   try {
-    const { login, password, fio, role } = req.body
+    const { login, password, fio, role, nameFiles } = req.body
     const candidate = await User.findOne({ where: { login } })
     if (candidate) {
       return res
@@ -30,6 +30,10 @@ router.post('/registration', async (req, res) => {
       time_year_vacation: 0,
       start_vacation: 0,
       end_vacation: 0,
+      user_position: '',
+      phone: '',
+      mail: '',
+      name_files: nameFiles,
     })
 
     const token = tokenHelper.generateAccessToken(newUser.id, newUser.login)
@@ -60,6 +64,10 @@ router.post('/registration', async (req, res) => {
         start_vacation: newUser.start_vacation,
         end_vacation: newUser.end_vacation,
       },
+      user_position: newUser.user_position,
+      phone: newUser.phone,
+      mail: newUser.mail,
+      nameFiles: newUser.name_files,
     })
   } catch (error) {
     console.log(error)

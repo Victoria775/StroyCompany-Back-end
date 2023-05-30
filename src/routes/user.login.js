@@ -45,6 +45,10 @@ router.post('/login', async (req, res) => {
         start_vacation: user.start_vacation,
         end_vacation: user.end_vacation,
       },
+      user_position: user.user_position,
+      phone: user.phone,
+      mail: user.mail,
+      nameFiles: user.name_files,
     })
   } catch (error) {
     res.status(401).json({

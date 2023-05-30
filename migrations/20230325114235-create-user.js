@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 const { DataTypes } = require('sequelize')
 
 /** @type {import('sequelize-cli').Migration} */
@@ -35,6 +35,18 @@ module.exports = {
 
       role: {
         type: Sequelize.STRING,
+      },
+      user_position: {
+        type: Sequelize.STRING,
+      },
+      phone: {
+        type: Sequelize.STRING,
+      },
+      mail: {
+        type: Sequelize.STRING,
+      },
+      name_files: {
+        type: Sequelize.TEXT,
       },
 
       time_month_work: {
